@@ -14,9 +14,21 @@ class Homepage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Anime Quiz'),
         ),
-        body: const Center(
-          child: Text('Questions'),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              FlutterLogo(size: 200),
+              ElevatedButton(
+                onPressed: () {
+                  print('Start button pressed');
+                },
+                child: const Text('Start'),
+              ),
+            ],
+          ),
         ),
+
       ),
     );
   }
