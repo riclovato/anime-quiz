@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'components/app_bar.dart';
+import 'package:quiz/models/question.dart';
+import '../components/app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Quiz extends StatefulWidget {
-  const Quiz({super.key});
-
+    final List<Question> questions;
+    const Quiz({Key? key, required this.questions}) : super(key: key);
   @override
   State<Quiz> createState() => _QuizState();
 }
@@ -39,7 +40,7 @@ class _QuizState extends State<Quiz> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(10, 0, 0, 50),
                   child: Text(
-                    'What is the name of the protagonist of Naruto?',
+                    widget.questions[0].question,
                     style: TextStyle(fontSize: 30),
                   ),
                 ),
@@ -49,13 +50,13 @@ class _QuizState extends State<Quiz> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      buildAnswerButton("Answer 1", 1),
+                      buildAnswerButton(widget.questions[0].options[0], 0),
                       SizedBox(height: 15,),
-                      buildAnswerButton("Answer 2", 2),
+                      buildAnswerButton(widget.questions[0].options[1], 1),
                        SizedBox(height: 15,),
-                      buildAnswerButton("Answer 3", 3),
+                      buildAnswerButton(widget.questions[0].options[2], 2),
                        SizedBox(height: 15,),
-                      buildAnswerButton("Answer 4", 4),
+                      buildAnswerButton(widget.questions[0].options[3], 3),
                     ],
                   ),
                 ),

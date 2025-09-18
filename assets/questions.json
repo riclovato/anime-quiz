@@ -1,0 +1,522 @@
+[
+  {
+    "question": "What is the name of the main character in 'Attack on Titan'?",
+    "options": ["Levi Ackerman", "Eren Yeager", "Armin Arlert", "Mikasa Ackerman"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'Naruto', what is the name of the technique that creates multiple copies of the user?",
+    "options": ["Rasengan", "Shadow Clone Jutsu", "Chidori", "Eight Gates"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which studio produced 'Demon Slayer: Kimetsu no Yaiba'?",
+    "options": ["Ufotable", "Madhouse", "Bones", "A-1 Pictures"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of Luffy's pirate ship in 'One Piece'?",
+    "options": ["Thousand Sunny", "Red Force", "Going Merry", "Oro Jackson"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'Death Note', what is the real name of the detective L?",
+    "options": ["Light Yagami", "L Lawliet", "Near", "Mello"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Quirks' power system?",
+    "options": ["Hunter x Hunter", "My Hero Academia", "Naruto", "Bleach"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of Edward Elric's younger brother in 'Fullmetal Alchemist'?",
+    "options": ["Roy Mustang", "Winry Rockbell", "Alphonse Elric", "Ling Yao"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'Dragon Ball Z', what is the name of Vegeta's home planet?",
+    "options": ["Namek", "Earth", "Planet Plant", "Vegeta"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime is set in the fictional city of Morioh?",
+    "options": ["Bleach", "Durarara!!", "JoJo's Bizarre Adventure: Diamond is Unbreakable", "Psycho-Pass"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of the protagonist in 'Cowboy Bebop'?",
+    "options": ["Jet Black", "Faye Valentine", "Spike Spiegel", "Vicious"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'Neon Genesis Evangelion', what are the giant mechas called?",
+    "options": ["Gundams", "Zoids", "Evangelions", "Voltron"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Survey Corps' as a main military division?",
+    "options": ["Code Geass", "Fullmetal Alchemist", "Gundam Wing", "Attack on Titan"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the main character in 'One Punch Man'?",
+    "options": ["Genos", "Mumen Rider", "Saitama", "Speed-o'-Sound Sonic"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'My Hero Academia', what is the name of All Might's signature move?",
+    "options": ["Detroit Smash", "Texas Smash", "Carolina Smash", "United States of Smash"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Zanpakuto' as the primary weapon?",
+    "options": ["Naruto", "One Piece", "Rurouni Kenshin", "Bleach"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the studio that produced 'Spirited Away'?",
+    "options": ["Toei Animation", "Studio Ghibli", "Madhouse", "Sunrise"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'Your Name', what is the name of the female protagonist?",
+    "options": ["Taki Tachibana", "Mitsuha Miyamizu", "Yotsuha Miyamizu", "Sayaka Natori"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which anime features the 'Seven Deadly Sins' as main characters?",
+    "options": ["Black Clover", "Rave Master", "Fairy Tail", "Seven Deadly Sins"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the protagonist in 'Mob Psycho 100'?",
+    "options": ["Reigen Arataka", "Ritsu Kageyama", "Dimple", "Shigeo Kageyama"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "In 'Attack on Titan', what is the name of the tallest wall?",
+    "options": ["Wall Rose", "Wall Sheena", "Wall Sina", "Wall Maria"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features a club called the 'SOS Brigade'?",
+    "options": ["Lucky Star", "K-On!", "Azumanga Daioh", "The Melancholy of Haruhi Suzumiya"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of the main character in 'Death Note'?",
+    "options": ["L Lawliet", "Misa Amane", "Ryuk", "Light Yagami"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'One Piece', what is the name of Luffy's signature attack?",
+    "options": ["Spirit Gun", "Rasengan", "Getsuga Tensho", "Gum-Gum Pistol"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime features the 'Gate of Babylon' as a noble phantasm?",
+    "options": ["Bleach", "Naruto", "Fairy Tail", "Fate/stay night"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the protagonist in 'Code Geass'?",
+    "options": ["Suzaku Kururugi", "C.C.", "Kallen Stadtfeld", "Lelouch Lamperouge"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'Hunter x Hunter', what is the name of the power system?",
+    "options": ["Chakra", "Quirks", "Reiatsu", "Nen"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Colossal Titan' as one of the main antagonists?",
+    "options": ["Fullmetal Alchemist", "Neon Genesis Evangelion", "Gurren Lagann", "Attack on Titan"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the main character in 'Bleach'?",
+    "options": ["Rukia Kuchiki", "Ichigo Kurosaki", "Renji Abarai", "Uryu Ishida"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'Fullmetal Alchemist', what is the name of the organization of alchemists?",
+    "options": ["Homunculi", "Ishvalans", "Xingese", "State Alchemists"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which anime features the 'Homunculi' as main antagonists?",
+    "options": ["Neon Genesis Evangelion", "Attack on Titan", "Death Note", "Fullmetal Alchemist"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the protagonist in 'Dragon Ball Z'?",
+    "options": ["Vegeta", "Gohan", "Piccolo", "Goku"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "In 'Attack on Titan', what is the name of Mikasa's signature weapon?",
+    "options": ["Thunder Spears", "ODM Gear", "3D Maneuver Gear", "Vertical Maneuvering Equipment"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Stand Arrow' as a plot device?",
+    "options": ["Hunter x Hunter", "Yu Yu Hakusho", "Bleach", "JoJo's Bizarre Adventure"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of the protagonist in 'Fairy Tail'?",
+    "options": ["Lucy Heartfilia", "Gray Fullbuster", "Erza Scarlet", "Natsu Dragneel"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'One Piece', what is the name of the world government's military force?",
+    "options": ["Revolutionary Army", "Cipher Pol", "Shichibukai", "Marines"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime features the 'Zero Requiem' plan?",
+    "options": ["Death Note", "Attack on Titan", "Psycho-Pass", "Code Geass"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the protagonist in 'Tokyo Ghoul'?",
+    "options": ["Touka Kirishima", "Hideyoshi Nagachika", "Rize Kamishiro", "Ken Kaneki"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'Naruto', what is the name of the village hidden in the leaves?",
+    "options": ["Sunagakure", "Kumogakure", "Kirigakure", "Konohagakure"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Geass' as a supernatural power?",
+    "options": ["Death Note", "Attack on Titan", "Fullmetal Alchemist", "Code Geass"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the protagonist in 'Black Clover'?",
+    "options": ["Yuno", "Yami Sukehiro", "Noelle Silva", "Asta"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'Attack on Titan', what is the name of the female Titan?",
+    "options": ["Mikasa Ackerman", "Historia Reiss", "Ymir", "Annie Leonhart"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which anime features 'Alchemy' as a central power system?",
+    "options": ["Magi: The Labyrinth of Magic", "The Ancient Magus' Bride", "Little Witch Academia", "Fullmetal Alchemist"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the protagonist in 'JoJo's Bizarre Adventure'?",
+    "options": ["Joseph Joestar", "Jotaro Kujo", "Giorno Giovanna", "Jonathan Joestar"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "In 'My Hero Academia', what is the name of the school for heroes?",
+    "options": ["Shiketsu High School", "Ketsubutsu Academy", "Isamu Academy", "U.A. High School"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Hollow' as a main enemy type?",
+    "options": ["Naruto", "One Piece", "Fairy Tail", "Bleach"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of the protagonist in 'Demon Slayer: Kimetsu no Yaiba'?",
+    "options": ["Nezuko Kamado", "Zenitsu Agatsuma", "Inosuke Hashibira", "Tanjiro Kamado"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'One Piece', what is the name of the pirate king?",
+    "options": ["Monkey D. Luffy", "Shanks", "Whitebeard", "Gol D. Roger"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime features the 'Shinigami' as a central concept?",
+    "options": ["Soul Eater", "Black Butler", "Death Note", "Bleach"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the protagonist in 'Steins;Gate'?",
+    "options": ["Kurisu Makise", "Mayuri Shiina", "Itaru Hashida", "Rintaro Okabe"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'Attack on Titan', what is the name of the beast Titan?",
+    "options": ["Reiner Braun", "Bertolt Hoover", "Annie Leonhart", "Zeke Yeager"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Quincy' as a race of humans with spiritual powers?",
+    "options": ["Naruto", "One Piece", "Fairy Tail", "Bleach"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the protagonist in 'No Game No Life'?",
+    "options": ["Shiro", "Stephanie Dola", "Jibril", "Sora"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Excalibur' as a powerful weapon?",
+    "options": ["Soul Eater", "Sword Art Online", "Bleach", "Fate/stay night"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the protagonist in 'Re:Zero'?",
+    "options": ["Emilia", "Rem", "Ram", "Subaru Natsuki"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "In 'One Piece', what is the name of the world's most wanted man?",
+    "options": ["Gol D. Roger", "Whitebeard", "Shanks", "Monkey D. Dragon"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which anime features the 'Akatsuki' as a criminal organization?",
+    "options": ["Bleach", "One Piece", "Fairy Tail", "Naruto"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the protagonist in 'Soul Eater'?",
+    "options": ["Soul Evans", "Black Star", "Death the Kid", "Maka Albarn"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'Attack on Titan', what is the name of the armored Titan?",
+    "options": ["Bertolt Hoover", "Annie Leonhart", "Zeke Yeager", "Reiner Braun"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime features the 'Nakama' as a central theme?",
+    "options": ["Naruto", "Bleach", "Fairy Tail", "One Piece"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of the protagonist in 'The Promised Neverland'?",
+    "options": ["Norman", "Ray", "Isabella", "Emma"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'My Hero Academia', what is the name of the villain who can decay things with a touch?",
+    "options": ["All For One", "Stain", "Dabi", "Tomura Shigaraki"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Gate' that connects modern Japan to a fantasy world?",
+    "options": ["Re:Zero", "No Game No Life", "Sword Art Online", "Gate"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the protagonist in 'Mushishi'?",
+    "options": ["Mushi", "Tanyu", "Adashino", "Ginko"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'Naruto', what is the name of the technique that creates a sphere of chakra?",
+    "options": ["Chidori", "Shadow Clone Jutsu", "Eight Gates", "Rasengan"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Zoldyck Family' as a family of assassins?",
+    "options": ["Naruto", "Bleach", "One Piece", "Hunter x Hunter"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the protagonist in 'Vinland Saga'?",
+    "options": ["Askeladd", "Canute", "Thorkell", "Thorfinn"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "In 'One Piece', what is the name of the currency used in the world?",
+    "options": ["Belí", "Belly", "Beri", "Berry"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which anime features the 'Espada' as a group of powerful antagonists?",
+    "options": ["Naruto", "One Piece", "Fairy Tail", "Bleach"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the protagonist in 'Gurren Lagann'?",
+    "options": ["Kamina", "Yoko Littner", "Nia Teppelin", "Simon"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'Death Note', how does a person die if their name is written in the notebook?",
+    "options": ["Heart attack", "Accident", "Suicide", "Natural causes"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime features the 'Phantom Troupe' as a group of thieves?",
+    "options": ["One Piece", "Naruto", "Bleach", "Hunter x Hunter"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the main character in 'Trigun'?",
+    "options": ["Nicholas D. Wolfwood", "Meryl Stryfe", "Milly Thompson", "Vash the Stampede"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'Sailor Moon', what is the name of the main character's civilian identity?",
+    "options": ["Sailor Mars", "Sailor Mercury", "Sailor Jupiter", "Usagi Tsukino"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Hundred Demon Night Parade'?",
+    "options": ["Inuyasha", "Demon Slayer", "Blue Exorcist", "Dororo"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the robot in 'The Iron Giant'?",
+    "options": ["Gigantor", "Mazinger Z", "Iron Giant", "Voltron"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'Pokémon', what type of Pokémon is Pikachu?",
+    "options": ["Water", "Fire", "Electric", "Grass"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which anime features the 'Gotei 13' as an organization?",
+    "options": ["Naruto", "One Piece", "Bleach", "Fairy Tail"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the main character in 'Akira'?",
+    "options": ["Kaneda", "Tetsuo", "Kei", "Ryū"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'Dragon Ball', what is the name of Goku's signature attack?",
+    "options": ["Kamehameha", "Spirit Bomb", "Destructo Disc", "Special Beam Cannon"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Witch of the Waste' as a character?",
+    "options": ["Howl's Moving Castle", "Spirited Away", "Kiki's Delivery Service", "Princess Mononoke"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the main character in 'Ghost in the Shell'?",
+    "options": ["Batou", "Togusa", "Aramaki", "Motoko Kusanagi"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'Yu-Gi-Oh!', what is the name of the main character?",
+    "options": ["Seto Kaiba", "Yugi Mutou", "Joey Wheeler", "Maximillion Pegasus"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Alchemist' who lost her memories?",
+    "options": ["Made in Abyss", "The Ancient Magus' Bride", "Violet Evergarden", "Fullmetal Alchemist"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the main character in 'Haikyuu!!'?",
+    "options": ["Tobio Kageyama", "Shoyo Hinata", "Daichi Sawamura", "Koshi Sugawara"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "In 'Neon Genesis Evangelion', what is the name of the first angel?",
+    "options": ["Sachiel", "Shamshel", "Ramiel", "Adam"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Black Knights' as a rebellion group?",
+    "options": ["Code Geass", "Attack on Titan", "Gurren Lagann", "Death Note"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of the main character in 'Samurai Champloo'?",
+    "options": ["Mugen", "Jin", "Fuu", "Kariya"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'One Piece', what is the name of Zoro's three-sword style?",
+    "options": ["Santoryu", "Nitoryu", "Ittoryu", "Yontoryu"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime features the 'Sternritter' as antagonists?",
+    "options": ["Naruto", "Bleach", "One Piece", "Fairy Tail"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the main character in 'Paranoia Agent'?",
+    "options": ["Detective Keiichi", "Tsukiko Sagi", "Shonen Bat", "Yūichi Taira"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'Fullmetal Alchemist', what is the law of equivalent exchange?",
+    "options": ["To obtain, something of equal value must be lost", "To create, something must be destroyed", "To gain power, one must sacrifice humanity", "To achieve immortality, one must pay with memories"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Worst Generation' of pirates?",
+    "options": ["Naruto", "Bleach", "One Piece", "Fairy Tail"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the name of the main character in 'Erased'?",
+    "options": ["Satoru Fujinuma", "Kayo Hinazuki", "Kenya Kobayashi", "Air Katagiri"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "In 'Attack on Titan', what is the name of the founding Titan?",
+    "options": ["Attack Titan", "Colossal Titan", "Armored Titan", "Founding Titan"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which anime features the 'Number' cards as a plot device?",
+    "options": ["Yu-Gi-Oh! Zexal", "Cardcaptor Sakura", "Selector Infected WIXOSS", "Chihayafuru"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the name of the main character in 'Devilman Crybaby'?",
+    "options": ["Ryo Asuka", "Miki Makimura", "Akira Fudo", "Miko Kuroda"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "In 'Naruto', what is the name of the technique that allows teleportation?",
+    "options": ["Flying Thunder God", "Body Flicker", "Substitution", "Summoning"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which anime features the 'Witch Cult' as antagonists?",
+    "options": ["Re:Zero", "Little Witch Academia", "Witch Hunter Robin", "Maria the Virgin Witch"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the name of the main character in 'Great Teacher Onizuka'?",
+    "options": ["Eikichi Onizuka", "Azusa Fuyutsuki", "Yoshito Kikuchi", "Noboru Yoshikawa"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "In 'One Piece', what is the name of the ancient weapons?",
+    "options": ["Pluton", "Poseidon", "Uranus", "All of the above"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which anime features the 'Joints' as a power system?",
+    "options": ["Kekkai Sensen", "Bungo Stray Dogs", "Noragami", "Mob Psycho 100"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the main character in 'Serial Experiments Lain'?",
+    "options": ["Alice Mizuki", "Lain Iwakura", "Juri Endo", "Rika Shirakawa"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "In 'Attack on Titan', what is the name of the royal family?",
+    "options": ["Fritz", "Reiss", "Yeager", "Ackerman"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which anime features the 'Altered Carbon' technology?",
+    "options": ["Psycho-Pass", "Ghost in the Shell", "Serial Experiments Lain", "Ergo Proxy"],
+    "correctAnswerIndex": 0
+  }
+]

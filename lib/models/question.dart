@@ -23,5 +23,11 @@ class Question{
        correctAnswerIndex: data['correct_answer_index'] ?? 0, 
     );
   }
-
+   Map<String, dynamic> toMap() {
+    return {
+      'question': question,
+      'options': options,
+      'correctAnswerIndex': correctAnswerIndex,
+    };
+  }
 }

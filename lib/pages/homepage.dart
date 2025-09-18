@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'app_bar.dart';
+import 'package:quiz/pages/quiz.dart';
+import '../components/app_bar.dart';
+import 'package:quiz/services/question_service.dart';
+import 'package:quiz/models/question.dart';
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+ 
+
+  final QuestionService _questionService = QuestionService();
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +28,19 @@ class Homepage extends StatelessWidget {
               Image.asset('images/logo.png', width: 300, height: 300),
               SizedBox(height: 40),
               ElevatedButton(
-                onPressed: () {
-                  print('Start button pressed');
-                },
+                onPressed: () async {
+            // busca a primeira questão do banco
+            Question firstQuestion = await _questionService.getFirstQuestion();
+            List<Question> questions = (await _questionService.getRandomQuestions(limit: 10));
+
+            // navega para a página do quiz passando a questão
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Quiz(questions: questions),
+              ),
+            );
+          },
                 child: const Text('Start', style: TextStyle(fontSize: 50)),
               ),
             ],
