@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../components/app_bar.dart';
-import 'package:quiz/services/question_service.dart';
-import 'package:quiz/models/question.dart';
 
-class Homepage extends StatelessWidget {
-  final QuestionService _questionService = QuestionService();
+
+class Result extends StatelessWidget {
+  final int correctAnswers;
+
+  const Result({super.key, required this.correctAnswers});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -23,21 +25,14 @@ class Homepage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //FlutterLogo(size: 200),
-              Image.asset('images/logo.png', width: 300, height: 300),
+              Text("You answered correctly $correctAnswers out of 10", style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
               SizedBox(height: 40),
               ElevatedButton(
                 onPressed: () async {
-                  List<Question> questions = (await _questionService
-                      .getRandomQuestions(limit: 10));
-
-                   Navigator.pushNamed(
-                    context,
-                    '/quiz',
-                    arguments: questions,
-                 
-                  );
+                
+                  Navigator.pushReplacementNamed(context, '/');
                 },
-                child: const Text('Start', style: TextStyle(fontSize: 50)),
+                child: const Text('Play Again', style: TextStyle(fontSize: 50)),
               ),
             ],
           ),

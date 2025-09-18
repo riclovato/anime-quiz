@@ -17,7 +17,7 @@ class Question {
     return Question(
       question: data['question'] ?? '',
       options: List<String>.from(data['options'] ?? []),
-      correctAnswerIndex: data['correct_answer_index'] ?? 0,
+      correctAnswerIndex: data['correctAnswerIndex'] ?? 0,
     );
   }
   Map<String, dynamic> toMap() {

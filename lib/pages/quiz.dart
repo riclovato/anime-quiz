@@ -1,7 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:quiz/models/question.dart';
 import '../components/app_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class Quiz extends StatefulWidget {
   final List<Question> questions;
@@ -12,18 +14,10 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   int questionIndex = 1;
+  int correctAnswer = 0;
   @override
   Widget build(BuildContext context) {
-  
-    
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: GoogleFonts.bangers().fontFamily,
-        primaryColor: Colors.deepPurpleAccent[200],
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: Colors.indigo[400],
-      ),
-      home: Scaffold(
+    return  Scaffold(
         appBar: customAppBar(context),
         body: SingleChildScrollView(
           child: Center(
@@ -53,13 +47,29 @@ class _QuizState extends State<Quiz> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      buildAnswerButton(widget.questions[questionIndex - 1].options[0], 0),
+                      buildAnswerButton(
+                        widget.questions[questionIndex - 1].options[0],
+                        0,
+                        widget.questions[questionIndex - 1].correctAnswerIndex,
+                      ),
                       SizedBox(height: 15),
-                      buildAnswerButton(widget.questions[questionIndex - 1].options[1], 1),
+                      buildAnswerButton(
+                        widget.questions[questionIndex - 1].options[1],
+                        1,
+                        widget.questions[questionIndex - 1].correctAnswerIndex,
+                      ),
                       SizedBox(height: 15),
-                      buildAnswerButton(widget.questions[questionIndex - 1].options[2], 2),
+                      buildAnswerButton(
+                        widget.questions[questionIndex - 1].options[2],
+                        2,
+                        widget.questions[questionIndex - 1].correctAnswerIndex,
+                      ),
                       SizedBox(height: 15),
-                      buildAnswerButton(widget.questions[questionIndex - 1].options[3], 3),
+                      buildAnswerButton(
+                        widget.questions[questionIndex - 1].options[3],
+                        3,
+                        widget.questions[questionIndex - 1].correctAnswerIndex,
+                      ),
                     ],
                   ),
                 ),
@@ -67,35 +77,62 @@ class _QuizState extends State<Quiz> {
             ),
           ),
         ),
-      ),
-    );
+      
+    );  
   }
 
-  Widget buildAnswerButton(String answerText, int number) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
-      child: SizedBox(
-        width: double.infinity,
-        child: ElevatedButton(
-          onPressed: () {
-             print('Answer $number button pressed');
-            setState(() {
-              if (questionIndex <= widget.questions.length - 1) {
-                questionIndex++; 
-              } else {
-                print("Quiz finished!");
-              }
-            });
-          },
-          style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(vertical: 20),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+  Widget buildAnswerButton(String answerText, int number, int answerIndex) {
+    Color? buttonColor;
+    return StatefulBuilder(
+      builder: (context, setButtonState) {
+        return Container(
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          child: SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                // muda a cor do botão
+  setButtonState(() {
+    buttonColor = (number == answerIndex) ? Colors.green : Colors.red;
+  });
+
+  // espera 500ms antes de ir para próxima ação
+  Future.delayed(const Duration(milliseconds: 500), () {
+    // volta a cor do botão
+    setButtonState(() {
+      buttonColor = null;
+    });
+
+    // atualiza o estado do quiz
+    if (number == answerIndex) {
+      setState(() {
+        correctAnswer++;
+      });
+      print('Correct answers: $correctAnswer');
+    }
+
+    if (questionIndex < widget.questions.length) {
+      setState(() {
+        questionIndex++;
+      });
+    } else {
+      
+      Navigator.pushNamed(context, '/result', arguments: correctAnswer);
+    }
+  });
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: buttonColor,
+                padding: EdgeInsets.symmetric(vertical: 20),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              child: Text(answerText, style: TextStyle(fontSize: 25)),
             ),
           ),
-          child: Text(answerText, style: TextStyle(fontSize: 25)),
-        ),
-      ),
+        );
+      },
     );
   }
 }
