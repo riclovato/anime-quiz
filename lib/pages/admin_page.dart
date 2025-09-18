@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import '../services/question_service.dart'; // ajuste o caminho conforme sua estrutura
+import '../services/question_service.dart';
 
 class AdminPage extends StatefulWidget {
   const AdminPage({super.key});
@@ -17,8 +17,9 @@ class _AdminPageState extends State<AdminPage> {
   Future<void> _addFromJsonText() async {
     try {
       List<dynamic> jsonData = jsonDecode(_controller.text);
-      List<Map<String, dynamic>> questions =
-          jsonData.map((e) => Map<String, dynamic>.from(e)).toList();
+      List<Map<String, dynamic>> questions = jsonData
+          .map((e) => Map<String, dynamic>.from(e))
+          .toList();
 
       await _service.addQuestions(questions);
 
@@ -26,9 +27,9 @@ class _AdminPageState extends State<AdminPage> {
         const SnackBar(content: Text("Questões adicionadas com sucesso!")),
       );
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Erro: $e")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Erro: $e")));
     }
   }
 
@@ -36,18 +37,21 @@ class _AdminPageState extends State<AdminPage> {
     try {
       String data = await rootBundle.loadString('assets/questions.json');
       List<dynamic> jsonData = jsonDecode(data);
-      List<Map<String, dynamic>> questions =
-          jsonData.map((e) => Map<String, dynamic>.from(e)).toList();
+      List<Map<String, dynamic>> questions = jsonData
+          .map((e) => Map<String, dynamic>.from(e))
+          .toList();
 
       await _service.addQuestions(questions);
 
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Questões do arquivo adicionadas com sucesso!")),
+        const SnackBar(
+          content: Text("Questões do arquivo adicionadas com sucesso!"),
+        ),
       );
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Erro ao ler arquivo: $e")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Erro ao ler arquivo: $e")));
     }
   }
 
@@ -65,7 +69,8 @@ class _AdminPageState extends State<AdminPage> {
               maxLines: 8,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: '[{ "question": "...", "options": ["..."], "correctAnswerIndex": 0 }]',
+                hintText:
+                    '[{ "question": "...", "options": ["..."], "correctAnswerIndex": 0 }]',
               ),
             ),
             const SizedBox(height: 10),

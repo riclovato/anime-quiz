@@ -4,9 +4,8 @@ import 'package:quiz/pages/quiz.dart';
 import '../components/app_bar.dart';
 import 'package:quiz/services/question_service.dart';
 import 'package:quiz/models/question.dart';
-class Homepage extends StatelessWidget {
- 
 
+class Homepage extends StatelessWidget {
   final QuestionService _questionService = QuestionService();
 
   @override
@@ -29,18 +28,16 @@ class Homepage extends StatelessWidget {
               SizedBox(height: 40),
               ElevatedButton(
                 onPressed: () async {
-            // busca a primeira questão do banco
-            Question firstQuestion = await _questionService.getFirstQuestion();
-            List<Question> questions = (await _questionService.getRandomQuestions(limit: 10));
+                  List<Question> questions = (await _questionService
+                      .getRandomQuestions(limit: 10));
 
-            // navega para a página do quiz passando a questão
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => Quiz(questions: questions),
-              ),
-            );
-          },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Quiz(questions: questions),
+                    ),
+                  );
+                },
                 child: const Text('Start', style: TextStyle(fontSize: 50)),
               ),
             ],

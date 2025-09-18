@@ -4,15 +4,18 @@ import '../components/app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Quiz extends StatefulWidget {
-    final List<Question> questions;
-    const Quiz({Key? key, required this.questions}) : super(key: key);
+  final List<Question> questions;
+  const Quiz({Key? key, required this.questions}) : super(key: key);
   @override
   State<Quiz> createState() => _QuizState();
 }
 
 class _QuizState extends State<Quiz> {
+  int questionIndex = 1;
   @override
   Widget build(BuildContext context) {
+  
+    
     return MaterialApp(
       theme: ThemeData(
         fontFamily: GoogleFonts.bangers().fontFamily,
@@ -32,7 +35,7 @@ class _QuizState extends State<Quiz> {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 20, 50),
                     child: Text(
-                      'Question 1 of 10',
+                      'Question $questionIndex of 10',
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
@@ -40,23 +43,23 @@ class _QuizState extends State<Quiz> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(10, 0, 0, 50),
                   child: Text(
-                    widget.questions[0].question,
+                    widget.questions[questionIndex - 1].question,
                     style: TextStyle(fontSize: 30),
                   ),
                 ),
-          
+
                 Padding(
                   padding: const EdgeInsets.fromLTRB(10, 80, 0, 50),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      buildAnswerButton(widget.questions[0].options[0], 0),
-                      SizedBox(height: 15,),
-                      buildAnswerButton(widget.questions[0].options[1], 1),
-                       SizedBox(height: 15,),
-                      buildAnswerButton(widget.questions[0].options[2], 2),
-                       SizedBox(height: 15,),
-                      buildAnswerButton(widget.questions[0].options[3], 3),
+                      buildAnswerButton(widget.questions[questionIndex - 1].options[0], 0),
+                      SizedBox(height: 15),
+                      buildAnswerButton(widget.questions[questionIndex - 1].options[1], 1),
+                      SizedBox(height: 15),
+                      buildAnswerButton(widget.questions[questionIndex - 1].options[2], 2),
+                      SizedBox(height: 15),
+                      buildAnswerButton(widget.questions[questionIndex - 1].options[3], 3),
                     ],
                   ),
                 ),
@@ -75,10 +78,17 @@ class _QuizState extends State<Quiz> {
         width: double.infinity,
         child: ElevatedButton(
           onPressed: () {
-            print('Answer $number button pressed');
+             print('Answer $number button pressed');
+            setState(() {
+              if (questionIndex <= widget.questions.length - 1) {
+                questionIndex++; 
+              } else {
+                print("Quiz finished!");
+              }
+            });
           },
           style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(vertical: 20 ),
+            padding: EdgeInsets.symmetric(vertical: 20),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
