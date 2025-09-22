@@ -39,7 +39,7 @@ class _ResultState extends State<Result> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (widget.correctAnswers >= 10) ...[
+            if (widget.correctAnswers == 10) ...[
               Stack(
                 alignment: Alignment.topCenter,
                 children: [

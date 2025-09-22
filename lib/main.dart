@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/models/question.dart';
+import 'package:quiz/pages/login_page.dart';
 import 'package:quiz/pages/quiz.dart';
 import 'package:quiz/pages/result.dart';
 import 'pages/admin_page.dart';
@@ -65,10 +66,13 @@ class MyApp extends StatelessWidget {
         );
       },
       routes: {
+        '/login': (context) => const LoginPage(),
+        '/admin': (context) => const AdminPage(),
         '/': (context) => Homepage(),
         '/quiz': (context) => Quiz(
           questions:
               ModalRoute.of(context)!.settings.arguments as List<Question>,
+              
         ),
         '/admin': (context) => AdminPage(),
         '/result': (context) => Result(

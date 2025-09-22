@@ -1,7 +1,10 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import '../services/question_service.dart';
+import 'package:flutter/services.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:quiz/services/question_service.dart';
+
 
 class AdminPage extends StatefulWidget {
   const AdminPage({super.key});
@@ -14,12 +17,49 @@ class _AdminPageState extends State<AdminPage> {
   final TextEditingController _controller = TextEditingController();
   final QuestionService _service = QuestionService();
 
+  String? role;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchUserRole();
+  }
+
+  Future<void> fetchUserRole() async {
+    User? user = FirebaseAuth.instance.currentUser;
+
+    if (user == null) {
+      // redireciona para login após o primeiro frame
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Navigator.pushReplacementNamed(context, '/login');
+      });
+      return;
+    }
+
+    DocumentSnapshot userDoc =
+        await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
+
+    setState(() {
+      role = userDoc.exists ? userDoc.get('role') : null;
+      isLoading = false;
+    });
+
+    if (role != 'admin' && mounted) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Navigator.pop(context);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Acesso negado. Você não é administrador.')),
+        );
+      });
+    }
+  }
+
   Future<void> _addFromJsonText() async {
     try {
       List<dynamic> jsonData = jsonDecode(_controller.text);
-      List<Map<String, dynamic>> questions = jsonData
-          .map((e) => Map<String, dynamic>.from(e))
-          .toList();
+      List<Map<String, dynamic>> questions =
+          jsonData.map((e) => Map<String, dynamic>.from(e)).toList();
 
       await _service.addQuestions(questions);
 
@@ -27,9 +67,8 @@ class _AdminPageState extends State<AdminPage> {
         const SnackBar(content: Text("Questões adicionadas com sucesso!")),
       );
     } catch (e) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text("Erro: $e")));
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Erro: $e")));
     }
   }
 
@@ -37,9 +76,8 @@ class _AdminPageState extends State<AdminPage> {
     try {
       String data = await rootBundle.loadString('assets/questions.json');
       List<dynamic> jsonData = jsonDecode(data);
-      List<Map<String, dynamic>> questions = jsonData
-          .map((e) => Map<String, dynamic>.from(e))
-          .toList();
+      List<Map<String, dynamic>> questions =
+          jsonData.map((e) => Map<String, dynamic>.from(e)).toList();
 
       await _service.addQuestions(questions);
 
@@ -49,14 +87,19 @@ class _AdminPageState extends State<AdminPage> {
         ),
       );
     } catch (e) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text("Erro ao ler arquivo: $e")));
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Erro ao ler arquivo: $e")));
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(title: const Text("Admin - Adicionar Questões")),
       body: Padding(
