@@ -25,7 +25,7 @@ class Homepage extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Image.asset('images/logo.png', width: 300, height: 300),
+              child: Image.asset('assets/logo.png', width: 300, height: 300),
             ),
             SizedBox(height: 40),
             ElevatedButton(

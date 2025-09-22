@@ -42,7 +42,7 @@ class _QuizState extends State<Quiz> {
               ),
 
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 80, 0, 50),
+                padding: const EdgeInsets.fromLTRB(10, 80, 10, 50),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
